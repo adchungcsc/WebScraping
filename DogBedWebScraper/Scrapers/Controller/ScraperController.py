@@ -10,10 +10,14 @@ from Scrapers.Websites.WalmartScraper import get_walmart_price
 
 def get_all_prices():
     all_products = []
+    print('Home Depot')
     all_products.extend(get_home_depot_prices())
     # all_products.extend(get_tractor_supply_prices())
+    print('Petco')
     all_products.extend(get_petco_prices())
+    print('Walmart')
     all_products.extend(get_walmart_prices())
+    print('Chewy')
     all_products.extend(get_chewy_prices())
     return all_products
 
