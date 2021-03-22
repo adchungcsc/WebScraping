@@ -30,7 +30,6 @@ def get_petco_price(url: str) -> dict:
                 size_selector.select_by_visible_text(item)
                 raw_price = driver.find_element_by_class_name("bAzokn")
                 current_price = raw_price.text.split()[0]
-                print(f'{item} {current_price}')
                 prices[item] = current_price
                 size_drop_down = driver.find_element_by_id(all_ids[item])
                 size_selector = Select(size_drop_down)

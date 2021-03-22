@@ -1,9 +1,16 @@
+def get_tracked_wayfair_products():
+    # need to use selenium to navigate the page. Web scraper detection gets triggered for navigating directly to the product (See WayfairScraper.py)
+    wayfair_products = {
+        "Medium Terracotta Elevated Pet Bed": "https://www.wayfair.com/pet/pdp/coolaroo-elevated-indooroutdoor-pet-cot-clr1395.html",
+    }
+    return wayfair_products
+
+
 def get_tracked_home_depot_products():
     home_depot_products = {
         "Large Nutmeg Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Large-Nutmeg-Steel-Pet-Bed-458959/206121542",
         "Medium Nutmeg Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Medium-Nutmeg-Steel-Pet-Bed-458942/205689391",
         "Large Size Steel Pet Bed Terracotta": "https://www.homedepot.com/p/Coolaroo-Large-Size-Steel-Pet-Bed-Terracotta-434410/202623038",
-        "Medium Size Steel Pet Bed Terracotta": "https://www.homedepot.com/p/Coolaroo-Medium-Size-Steel-Pet-Bed-Terracotta-434403/202623037",
         "Medium Grey Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Medium-Grey-Steel-Pet-Bed-436049/205689390",
         "Large Nutmeg Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Large-Nutmeg-Steel-Pet-Bed-458959/206121542",
         "Medium Size Steel Pet Bed Brunswick Green": "https://www.homedepot.com/p/Coolaroo-Medium-Size-Steel-Pet-Bed-Brunswick-Green-317270/202623031",
@@ -21,7 +28,6 @@ def get_tracked_petco_products():
         "Green Elevated Dog Bed": "https://www.petco.com/shop/en/petcostore/product/coolaroo-green-elevated-dog-bed",
         "Navy Blue Elevated Dog Bed": "https://www.petco.com/shop/en/petcostore/product/coolaroo-navy-blue-elevated-dog-bed",
         "Green Elevated Pet Bed": "https://www.petco.com/shop/en/petcostore/product/coolaroo-green-elevated-pet-bed",
-        "Turquoise Elevated Dog Bed": "https://www.petco.com/shop/en/petcostore/product/coolaroo-turquoise-elevated-dog-bed",
         # "Navy Blue Elevated Dog Bed Replacement Cover": "https://www.petco.com/shop/en/petcostore/product/coolaroo-navy-blue-elevated-dog-bed-replacement-cover",
         # "Green Elevated Dog Bed Replacement Cover": "https://www.petco.com/shop/en/petcostore/product/coolaroo-green-elevated-dog-bed-replacement-cover",
         # "Turquoise Elevated Dog Bed Replacement Cover": "https://www.petco.com/shop/en/petcostore/product/coolaroo-turquoise-elevated-dog-bed-replacement-cover",
@@ -82,5 +88,15 @@ def get_tracked_chewy_products():
 
 def get_tracked_tractor_supply_co_products():
     tractor_supply_products = {
-        "Large Elevated Pet Bed": "https://www.tractorsupply.com/tsc/product/coolaroo-large-elevated-pet-bed?cm_vc=-10011"}
+        "Small Gray Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466622&stlocId=10151&hasMultiVariantMapp=N",
+        "Large Gray Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466624&stlocId=10151&hasMultiVariantMapp=N",
+        "Small Terracotta Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466619&stlocId=10151&hasMultiVariantMapp=N",
+        "Medium Terracotta Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466620&stlocId=10151&hasMultiVariantMapp=N",
+        "Small Nutmeg Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466625&stlocId=10151&hasMultiVariantMapp=N",
+        "Medium Nutmeg Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466626&stlocId=10151&hasMultiVariantMapp=N",
+        "Large Nutmeg Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466627&stlocId=10151&hasMultiVariantMapp=N",
+        "Small Green Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466616&stlocId=10151&hasMultiVariantMapp=N",
+        "Medium Green Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466617&stlocId=10151&hasMultiVariantMapp=N",
+        "Large Green Elevated Pet Bed": "https://www.tractorsupply.com/search/ext/resources/store/10151/productview/getItemPrice?productId=466618&stlocId=10151&hasMultiVariantMapp=N",
+    }
     return tractor_supply_products

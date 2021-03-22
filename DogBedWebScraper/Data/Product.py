@@ -22,4 +22,4 @@ class Product:
             self.size_class = 'Small'
 
     def __str__(self):
-        return f'{self.vendor},{self.size_class},{self.product_name},{self.price},{self.url}\n'
+        return f'{self.vendor},{self.size_class},{self.product_name},{self.price},{self.url}'
