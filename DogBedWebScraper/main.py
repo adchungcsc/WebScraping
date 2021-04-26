@@ -4,7 +4,7 @@ from Scrapers.Controller.ScraperController import get_all_prices
 
 if __name__ == '__main__':
     products = get_all_prices()
-    current_date = datetime.now().strftime("%d-%m-%Y|%H-%M-%S")
+    current_date = datetime.now().strftime("%m-%d-%Y|%H:%M:%S")
     THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
     file_name = os.path.join(THIS_FOLDER, f"PetBedPrices{current_date}.csv")
     file = open(file_name, "w")

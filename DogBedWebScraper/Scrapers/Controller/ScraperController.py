@@ -17,9 +17,14 @@ def get_all_prices():
     all_products = []
     # I am speed (farm each scraped site off to a thread)
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = [executor.submit(get_home_depot_prices), executor.submit(get_tractor_supply_prices),
-                   executor.submit(get_petco_prices), executor.submit(get_walmart_prices),
-                   executor.submit(get_chewy_prices), executor.submit(get_wayfair_prices)]
+        futures = [
+            executor.submit(get_home_depot_prices),
+            executor.submit(get_tractor_supply_prices),
+            executor.submit(get_petco_prices),
+            executor.submit(get_walmart_prices),
+            executor.submit(get_chewy_prices),
+            executor.submit(get_wayfair_prices),
+        ]
         for future in concurrent.futures.as_completed(futures):
             if len(future.result()) == 0:
                 continue
@@ -40,9 +45,11 @@ def get_wayfair_prices():
             # Sleep done within get_wayfair_price
             products = get_wayfair_price(tracked_products[product])
             wayfair_products.extend(products)
+            print(f'SUCCESS {product} {tracked_products[product]}')
         except Exception as e:
             # Want to catch generic exception so report generates anyway (pages change so what works today may not work tomorrow)
             print("WAYFAIR FAILED")
+            print(f'{product} {tracked_products[product]}')
             print(e)
     return wayfair_products
 
@@ -55,11 +62,13 @@ def get_home_depot_prices() -> list[Product]:
             # Pretend to be human
             time.sleep(random.uniform(3, 10))
             price = get_home_depot_price(tracked_products[product])
+            print(f'SUCCESS {product} {tracked_products[product]}')
             product = Product("Home Depot", product, price, tracked_products[product])
             home_depot_products.append(product)
         except Exception as e:
             # Want to catch generic exception so report generates anyway (pages change so what works today may not work tomorrow)
             print("HOME DEPOT FAILED")
+            print(f'{product} {tracked_products[product]}')
             print(e)
     return home_depot_products
 
@@ -74,11 +83,13 @@ def get_petco_prices() -> list[Product]:
             prices = get_petco_price(tracked_products[tracked_product])
             for price in prices:
                 product_name = tracked_products[tracked_product].rsplit('/', 1)[1]
+                print(f'SUCCESS {tracked_product} {tracked_products[tracked_product]}')
                 product = Product('Petco', f'{price}-{product_name}', prices[price], tracked_products[tracked_product])
                 petco_products.append(product)
         except Exception as e:
             # Want to catch generic exception so report generates anyway (pages change so what works today may not work tomorrow)
             print("PETCO FAILED")
+            print(f'{tracked_product} {tracked_products[tracked_product]}')
             print(e)
     return petco_products
 
@@ -90,11 +101,13 @@ def get_walmart_prices() -> list[Product]:
         try:
             time.sleep(random.uniform(3, 10))
             price = get_walmart_price(tracked_products[tracked_product])
+            print(f'SUCCESS {tracked_product} {tracked_products[tracked_product]}')
             product = Product('Walmart', tracked_product, price, tracked_products[tracked_product])
             walmart_products.append(product)
         except Exception as e:
             # Want to catch generic exception so report generates anyway (pages change so what works today may not work tomorrow)
             print("WALMART FAILED")
+            print(f'{tracked_product} {tracked_products[tracked_product]}')
             print(e)
     return walmart_products
 
@@ -106,11 +119,13 @@ def get_chewy_prices() -> list[Product]:
         try:
             time.sleep(random.uniform(3, 10))
             price = get_chewy_price(tracked_products[tracked_product])
+            print(f'SUCCESS {tracked_product} {tracked_products[tracked_product]}')
             product = Product('Chewy', tracked_product, price, tracked_products[tracked_product])
             chewy_products.append(product)
         except Exception as e:
             # Want to catch generic exception so report generates anyway (pages change so what works today may not work tomorrow)
             print("CHEWY FAILED")
+            print(f'{tracked_product} {tracked_products[tracked_product]}')
             print(e)
     return chewy_products
 
@@ -122,10 +137,12 @@ def get_tractor_supply_prices() -> list[Product]:
         try:
             time.sleep(random.uniform(3, 10))
             price = get_tractor_supply_co_price(tracked_products[tracked_product])
+            print(f'SUCCESS {tracked_product} {tracked_products[tracked_product]}')
             product = Product('Tractor Supply Co.', tracked_product, price, tracked_products[tracked_product])
             tractor_supply_products.append(product)
         except Exception as e:
             # Want to catch generic exception so report generates anyway (pages change so what works today may not work tomorrow)
             print("TRACTOR SUPPLY CO FAILED")
+            print(f'{tracked_product} {tracked_products[tracked_product]}')
             print(e)
     return tractor_supply_products

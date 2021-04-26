@@ -22,6 +22,15 @@ def perform_simulated_browser_request(url: str) -> BeautifulSoup:
 
 
 def click_headless_browser_request(url: str):
+    # options = ChromeOptions()
+    # options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/85.0")
+    # options.add_argument("--headless")
+    # options.add_argument('--no-sandbox')
+    # options.add_argument('--disable-dev-shm-usage')
+    # options.add_argument('window-size=1920x1480')
+    # driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+    # driver.get(url)
+    # return driver
     options = ChromeOptions()
     options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/85.0")
     options.add_argument("--headless")

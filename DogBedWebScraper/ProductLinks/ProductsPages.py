@@ -12,9 +12,9 @@ def get_tracked_home_depot_products():
         "Medium Nutmeg Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Medium-Nutmeg-Steel-Pet-Bed-458942/205689391",
         "Large Size Steel Pet Bed Terracotta": "https://www.homedepot.com/p/Coolaroo-Large-Size-Steel-Pet-Bed-Terracotta-434410/202623038",
         "Medium Grey Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Medium-Grey-Steel-Pet-Bed-436049/205689390",
-        "Large Nutmeg Steel Pet Bed": "https://www.homedepot.com/p/Coolaroo-Large-Nutmeg-Steel-Pet-Bed-458959/206121542",
         "Medium Size Steel Pet Bed Brunswick Green": "https://www.homedepot.com/p/Coolaroo-Medium-Size-Steel-Pet-Bed-Brunswick-Green-317270/202623031",
         "Large Size Steel Pet Bed Brunswick Green": "https://www.homedepot.com/p/Coolaroo-Large-Size-Steel-Pet-Bed-Brunswick-Green-317287/202623033",
+        "Medium Terracotta Elevated Pet Bed": "https://www.homedepot.com/p/Coolaroo-Medium-Size-Steel-Pet-Bed-Terracotta-434403/202623037"
         # "Large Size Pet Bed Replacement Cover Terracotta": "https://www.homedepot.com/p/Coolaroo-Large-Size-Pet-Bed-Replacement-Cover-Terracotta-434441/202623040",
         # "Large Size Pet Bed Replacement Cover Brunswick Green": "https://www.homedepot.com/p/Coolaroo-LargeSize-Pet-Bed-Replacement-Cover-Brunswick-Green-317713/202623036",
         # "Medium Size Pet Bed Replacement Cover Brunswick Green": "https://www.homedepot.com/p/Coolaroo-Medium-Size-Pet-Bed-Replacement-Cover-Brunswick-Green-317706/202623034",
@@ -50,6 +50,7 @@ def get_tracked_walmart_products():
         "Medium Green Elevated Pet Bed": "https://www.walmart.com/ip/The-Original-Coolaroo-Elevated-Pet-Dog-Bed-for-Indoors-Outdoors-Medium-Brunswick-Green/14145972?selected=true",
         "Medium Gray Elevated Pet Bed": "https://www.walmart.com/ip/The-Original-Coolaroo-Elevated-Pet-Bed-for-Indoors-Outdoors-Medium-Gray/14145974?selected=true",
         "Medium Nutmeg Elevated Pet Bed": "https://www.walmart.com/ip/The-Original-Coolaroo-Elevated-Pet-Bed-Medium-Nutmeg/703714307?selected=true",
+        "Large Blue Elevated Pet Bed": "https://www.walmart.com/ip/Coolaroo-The-Original-Elevated-Pet-Bed-Large-Aquatic-Blue/244805785?selected=true",
         "Large Terracotta Elevated Pet Bed": "https://www.walmart.com/ip/The-Original-Coolaroo-Elevated-Pet-Dog-Bed-for-Indoors-Outdoors-Large-Terracotta/14145976?selected=true",
         "Large Green Elevated Pet Bed": "https://www.walmart.com/ip/The-Original-Coolaroo-Elevated-Pet-Bed-for-Indoors-Outdoors-Large-Brunswick-Green/14145975?selected=true",
         "Large Gray Elevated Pet Bed": "https://www.walmart.com/ip/The-Original-Coolaroo-Elevated-Pet-Dog-Bed-for-Indoors-Outdoors-Large-Gray/14145977?selected=true",
